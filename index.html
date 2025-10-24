@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Site Preview</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+          Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji",
+          "Segoe UI Emoji";
+        display: grid;
+        place-items: center;
+        background: radial-gradient(1200px 800px at 50% -10%, rgba(0,0,0,0.05), transparent),
+                    radial-gradient(800px 600px at -10% 110%, rgba(0,0,0,0.04), transparent),
+                    radial-gradient(800px 600px at 110% 110%, rgba(0,0,0,0.04), transparent);
+        padding: 24px;
+      }
+      .card {
+        width: min(720px, 95vw);
+        border-radius: 16px;
+        padding: 28px 28px 24px;
+        backdrop-filter: blur(8px);
+        background: color-mix(in oklab, Canvas 92%, transparent);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.06);
+        border: 1px solid color-mix(in oklab, CanvasText 10%, transparent);
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(24px, 3.5vw, 32px);
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 8px 0;
+        line-height: 1.55;
+        color: color-mix(in oklab, CanvasText 70%, transparent);
+      }
+      .muted { color: color-mix(in oklab, CanvasText 55%, transparent); }
+      .pill {
+        display: inline-block;
+        font: inherit;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: color-mix(in oklab, CanvasText 8%, transparent);
+        color: color-mix(in oklab, CanvasText 80%, transparent);
+        border: 1px solid color-mix(in oklab, CanvasText 12%, transparent);
+      }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .actions { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+      .btn {
+        padding: 10px 14px;
+        border-radius: 10px;
+        border: 1px solid color-mix(in oklab, CanvasText 12%, transparent);
+        background: color-mix(in oklab, Canvas 96%, transparent);
+        color: CanvasText;
+        text-decoration: none;
+        transition: transform 0.08s ease, background 0.2s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .small { font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main">
+      <div class="pill">Preview placeholder</div>
+      <h1>Preview is ready</h1>
+      <p>
+        I couldn't find any web project files in this repository, so I've provided
+        a simple placeholder page so you can still open a preview.
+      </p>
+      <p class="muted small">
+        If your site exists in a subdirectory or another repo, point me to it and
+        I will run the correct preview command (e.g., <code>npm run dev</code>,
+        <code>next dev</code>, <code>vite</code>, or a static server).
+      </p>
+      <div class="actions">
+        <a class="btn" href="#" onclick="location.reload()">Reload</a>
+        <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer noopener">Help</a>
+      </div>
+    </main>
+  </body>
+</html>
